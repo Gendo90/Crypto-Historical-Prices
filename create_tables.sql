@@ -10,7 +10,7 @@ CREATE TABLE bitcoin (
 	Close_Price DECIMAL,
 	Coin_Volume DECIMAL,
 	PRIMARY KEY (Unix_Timestamp, Symbol)
-)
+);
 
 -- Create the table for ethereum - the table schema is the same
 -- for each coin, but has different values for the columns
@@ -24,4 +24,4 @@ CREATE TABLE ethereum (
 	Close_Price DECIMAL,
 	Coin_Volume DECIMAL,
 	PRIMARY KEY (Unix_Timestamp, Symbol)
-)
+);
