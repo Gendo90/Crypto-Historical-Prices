@@ -43,6 +43,25 @@ There is a combined "Extract and Transform" Jupyter notebook in this repository,
 
 ## Load Data
 
+### Create SQL Tables
 
+The file [**create_tables.sql**](./create_tables.sql) should be loaded or copied into a PostgreSQL database editor, like pgAdmin. Once the code to create the 'bitcoin' and 'ethereum' tables is loaded, run the code to create those two tables. This must be completed **before** the next step, or it will not work.
+
+
+### Load Cryptocurrencies into SQL
+
+* Create a config file named `config.py` in the main repo directory - [here](./)  - in order to load your specific username and password for PostgreSQL. The file should contain only two lines, that look like: 
+
+        user = 'USERNAME'
+        pw = 'PASSWORD'
+    where the `USERNAME` is the username for your PostgreSQL database, and `PASSWORD` is the password for the database.
+
+* You are now ready to run [this notebook](./ETH\ \&\ BTC\ Load\ Into\ SQL.ipynb) and load the .csv data into your database!
+* Follow the instructions provided in the "ETH & BTC Load Into SQL.ipynb" notebook listed above. Remember to check your connection string to connect on the correct port to the correct database! There should be printed feedback that you have loaded first the Ethereum, and then the Bitcoin data correctly.
+* There will now be two tables in your database - 
+    * bitcoin
+    * ethereum
+
+    More may be added later!
 
 ## Update Data
